@@ -1,0 +1,10 @@
+@import "resets.css";
+
+@import "variables.css";
+@import "base.css";
+@import "navbar.css";
+@import "information.css";
+@import "history.css";
+@import "results.css";
+@import "patients.css";
+@import "diagnostic.css";

@@ -1,0 +1,192 @@
+.history-container {
+  min-height: 550px;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.history-container__wrapper-graph {
+  display: flex;
+  box-sizing: border-box;
+  width: 100%;
+  padding: 16px;
+  background: var(--light-purple) 0% 0% no-repeat padding-box;
+  border-radius: 12px;
+  margin-top: 40px;
+}
+
+.history-container__wrapper-graph__chart-info {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 28px;
+  padding-right: 48px;
+}
+
+.history-container__wrapper-graph__column-left {
+  display: flex;
+  flex-direction: column;
+  width: 70%;
+}
+
+.history-container__wrapper-graph__chart-info h4 {
+  font: normal normal bold 18px/24px Manrope;
+  letter-spacing: 0px;
+  color: var(--black);
+  text-transform: capitalize;
+}
+
+.history-container__wrapper-graph__chart-info span {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  font: normal normal normal 14px/19px Manrope;
+  letter-spacing: 0px;
+  color: var(--black);
+}
+
+.history-container__wrapper-graph__chart-info img {
+  display: flex;
+  height: 12px;
+  width: 12px;
+  margin-left: 16px;
+}
+
+.history-container__wrapper-graph__column-right {
+  display: flex;
+  flex-direction: column;
+  width: 30%;
+}
+
+.history-container__wrapper-graph__average {
+  display: flex;
+  flex-direction: column;
+}
+
+.history-container__wrapper-graph__title {
+  display: flex;
+  align-items: center;
+  font: normal normal bold 14px/19px Manrope;
+  letter-spacing: 0px;
+  color: var(--black);
+  text-transform: capitalize;
+  margin-bottom: 8px;
+}
+
+.bullet-systolic {
+  display: flex;
+  border-radius: 50%;
+  height: 14px;
+  width: 14px;
+  margin-right: 4px;
+  background-color: var(--dark-pink);
+  border: 1px solid var(--white);
+}
+
+.bullet-diastolic {
+  display: flex;
+  border-radius: 50%;
+  height: 14px;
+  width: 14px;
+  margin-right: 4px;
+  background-color: var(--dark-purple);
+  border: 1px solid var(--white);
+}
+
+.history-container__wrapper-graph__value {
+  font: normal normal bold 22px/30px Manrope;
+  letter-spacing: 0px;
+  color: var(--black);
+  text-transform: capitalize;
+  margin-bottom: 8px;
+}
+
+.history-container__wrapper-graph__average p {
+  display: flex;
+  align-items: center;
+  font: normal normal normal 14px/19px Manrope;
+  letter-spacing: 0px;
+  color: var(--black);
+}
+
+.history-container__wrapper-graph__average p img {
+  display: flex;
+  width: 10px;
+  height: 10px;
+  margin-right: 8px;
+}
+
+.history-container__divider {
+  display: flex;
+  border-top: 1px solid var(--middle-gray);
+  width: 100%;
+  margin: 16px 0;
+}
+
+.history-container-cards {
+  display: flex;
+  flex-direction: row;
+  height: 242px;
+  width: 100%;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.history-container-cards__box {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 31%;
+  border-radius: 12px;
+  padding: 16px;
+}
+
+.history-container-cards__box img {
+  display: flex;
+  height: 96px;
+  width: 96px;
+  margin-bottom: 16px;
+}
+
+.history-container-cards__box p {
+  font: normal normal normal 16px/22px Manrope;
+  letter-spacing: 0px;
+  color: var(--black);
+  text-transform: capitalize;
+}
+
+.history-container-cards__box h5 {
+  font: normal normal 800 30px/41px Manrope;
+  letter-spacing: 0px;
+  color: var(--black);
+  margin-bottom: 17px;
+}
+
+.history-container-cards__box span {
+  display: flex;
+  align-items: center;
+  font: normal normal normal 14px/19px Manrope;
+  letter-spacing: 0px;
+  color: var(--black);
+}
+
+.history-container-cards__heart__icon {
+  display: flex !important;
+  height: 10px !important;
+  width: 10px !important;
+  margin-right: 8px;
+  margin-bottom: 0 !important;
+}
+
+.history-container-cards__respiratory {
+  background-color: var(--light-blue);
+}
+
+.history-container-cards__temperature {
+  background-color: var(--light-red);
+}
+
+.history-container-cards__heart {
+  background-color: var(--light-pink);
+}

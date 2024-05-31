@@ -1,0 +1,274 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/styles.css" />
+    <title>Coalition Technologies Patient Data</title>
+  </head>
+  <body>
+    <main class="main-grid">
+      <!-- navbar -->
+      <nav class="navbar-grid">
+        <div class="navbar-container">
+          <img src="assets/logo.png" alt="" srcset="" class="navbar__logo" />
+          <div class="navbar__wrapper-options">
+            <span class="navbar__wrapper-options__icon">
+              <img src="assets/icons/home.png" alt="" srcset="" />
+              Overview
+            </span>
+            <span class="navbar__wrapper-options__icon navbar--active">
+              <img src="assets/icons/group.png" alt="" srcset="" />
+              Patients
+            </span>
+            <span class="navbar__wrapper-options__icon">
+              <img src="assets/icons/calendar_today.png" alt="" srcset="" />
+              Schedule
+            </span>
+            <span class="navbar__wrapper-options__icon">
+              <img src="assets/icons/calendar_today.png" alt="" srcset="" />
+              Message
+            </span>
+            <span class="navbar__wrapper-options__icon">
+              <img src="assets/icons/credit_card.png" alt="" srcset="" />
+              Transactions
+            </span>
+          </div>
+          <div class="account">
+            <img
+              src="assets/senior-woman-doctor.png"
+              alt=""
+              class="account__image"
+            />
+            <p class="account__wrapper-text">
+              <span class="account__wrapper-text__title">Dr. Jose Simmons</span>
+              <span class="account__wrapper-text__subtitle"
+                >General Practitioner</span
+              >
+            </p>
+            <img
+              src="assets/icons/settings.png"
+              alt=""
+              class="account__icon mr-12"
+            />
+            <img
+              src="assets/icons/more_vert.png"
+              alt=""
+              class="account__icon"
+            />
+          </div>
+        </div>
+      </nav>
+      <section class="patients-grid">
+        <!-- patients -->
+        <div class="container patients-container">
+          <div class="patients-container__wrapper-title">
+            <h3 class="subtitle">Patients</h3>
+            <img src="assets/icons/search.svg" alt="" />
+          </div>
+          <div
+            class="patients-container__wrapper-list"
+            id="patients-container__wrapper-list"
+          ></div>
+        </div>
+      </section>
+      <section class="history-grid">
+        <!-- history -->
+        <div class="container history-container mb-32">
+          <h3 class="subtitle">Diagnosis History</h3>
+          <div class="history-container__wrapper-graph">
+            <div class="history-container__wrapper-graph__column-left">
+              <div class="history-container__wrapper-graph__chart-info">
+                <h4>Blood Pressure</h4>
+                <span
+                  >Last 6 months <img src="assets/icons/expand_more.svg" alt=""
+                /></span>
+              </div>
+              <canvas id="myChart" style="width: 100%"></canvas>
+            </div>
+            <div class="history-container__wrapper-graph__column-right">
+              <div class="history-container__wrapper-graph__average">
+                <div class="history-container__wrapper-graph__title">
+                  <span class="bullet-systolic"></span>
+                  <h4>Systolic</h4>
+                </div>
+                <span
+                  class="history-container__wrapper-graph__value"
+                  id="systolic_value"
+                ></span>
+                <p>
+                  <img src="assets/icons/arrow_up.svg" alt="" /> Higher than
+                  Average
+                </p>
+              </div>
+              <div class="history-container__divider"></div>
+              <div class="history-container__wrapper-graph__average">
+                <div class="history-container__wrapper-graph__title">
+                  <span class="bullet-diastolic"></span>
+                  <h4>Diastolic</h4>
+                </div>
+                <span
+                  class="history-container__wrapper-graph__value"
+                  id="diastolic_value"
+                ></span>
+                <p>
+                  <img src="assets/icons/arrow_down.svg" alt="" /> Lower than
+                  Average
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="history-container-cards">
+            <div
+              class="history-container-cards__box history-container-cards__respiratory"
+            >
+              <img src="assets/icons/respiratory_rate.svg" alt="" />
+              <p>Respiratory Rate</p>
+              <h5 id="respiratory_value"></h5>
+              <span id="respiratory_level"></span>
+            </div>
+            <div
+              class="history-container-cards__box history-container-cards__temperature"
+            >
+              <img src="assets/icons/temperature.svg" alt="" />
+              <p>Temperature</p>
+              <h5 id="temperature_value"></h5>
+              <span id="temperature_level"></span>
+            </div>
+            <div
+              class="history-container-cards__box history-container-cards__heart"
+            >
+              <img src="assets/icons/heart.svg" alt="" />
+              <p>Heart Rate</p>
+              <h5 id="heart_value"></h5>
+              <span id="heart_level"></span>
+            </div>
+          </div>
+        </div>
+        <!-- diagnostic -->
+        <div class="container diagnostic-container">
+          <h3 class="subtitle diagnostic-container__title">Diagnostic List</h3>
+          <div class="diagnostic-container__header-table">
+            <div class="w-25">Problem/Diagnosis</div>
+            <div class="w-50">Description</div>
+            <div class="w-25">Status</div>
+          </div>
+          <div
+            class="diagnostic-container__body-table"
+            id="diagnostic-container__body-table"
+          ></div>
+        </div>
+      </section>
+      <section class="information-grid">
+        <!-- information -->
+        <div class="container information-container mb-32">
+          <img
+            src="assets/senior-woman-doctor.png"
+            alt=""
+            class="information-container__image"
+            id="information-container__wrapper-data_image"
+          />
+          <h3 class="subtitle mb-32">Jessica Taylor</h3>
+          <div class="information-container__wrapper-data">
+            <img
+              src="assets/icons/birth.png"
+              alt=""
+              class="information-container__wrapper-data__img"
+            />
+            <p class="information-container__wrapper-data__text">
+              <span class="information-container__wrapper-data__label"
+                >Birth of Date</span
+              >
+              <span
+                class="information-container__wrapper-data__value"
+                id="information-container__wrapper-data_birthday"
+              ></span>
+            </p>
+          </div>
+          <div class="information-container__wrapper-data">
+            <img
+              src="assets/icons/female.png"
+              alt=""
+              class="information-container__wrapper-data__img"
+            />
+            <p class="information-container__wrapper-data__text">
+              <span class="information-container__wrapper-data__label"
+                >Gender</span
+              >
+              <span
+                class="information-container__wrapper-data__value"
+                id="information-container__wrapper-data_gender"
+              ></span>
+            </p>
+          </div>
+          <div class="information-container__wrapper-data">
+            <img
+              src="assets/icons/phone.png"
+              alt=""
+              class="information-container__wrapper-data__img"
+            />
+            <p class="information-container__wrapper-data__text">
+              <span class="information-container__wrapper-data__label"
+                >Contact Info.</span
+              >
+              <span
+                class="information-container__wrapper-data__value"
+                id="information-container__wrapper-data_contact"
+              ></span>
+            </p>
+          </div>
+          <div class="information-container__wrapper-data">
+            <img
+              src="assets/icons/phone.png"
+              alt=""
+              class="information-container__wrapper-data__img"
+            />
+            <p class="information-container__wrapper-data__text">
+              <span class="information-container__wrapper-data__label"
+                >Emergency Contacts</span
+              >
+              <span
+                class="information-container__wrapper-data__value"
+                id="information-container__wrapper-data_emergency"
+              ></span>
+            </p>
+          </div>
+          <div class="information-container__wrapper-data">
+            <img
+              src="assets/icons/insurance.png"
+              alt=""
+              class="information-container__wrapper-data__img"
+            />
+            <p class="information-container__wrapper-data__text">
+              <span class="information-container__wrapper-data__label"
+                >Insurance Provider</span
+              >
+              <span
+                class="information-container__wrapper-data__value"
+                id="information-container__wrapper-data_insurance"
+              ></span>
+            </p>
+          </div>
+
+          <button type="button" class="information-container__button">
+            Show All Information
+          </button>
+        </div>
+        <!-- results -->
+        <div class="container results-container">
+          <h3 class="subtitle mb-16">Lab Results</h3>
+          <div class="results__wrapper-lab" id="results__wrapper-lab"></div>
+        </div>
+      </section>
+    </main>
+
+    <script src="js/index.js"></script>
+  </body>
+</html>

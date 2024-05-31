@@ -1,0 +1,73 @@
+.patients-container {
+  height: 1108px;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.patients-container__wrapper-title {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  height: 32px;
+  margin-bottom: 40px;
+}
+
+.patients-container__wrapper-title img {
+  display: flex;
+  height: 18px;
+}
+
+.patients-container__wrapper-list {
+  display: flex;
+  flex-direction: column;
+  height: 1090px;
+  width: 100%;
+  overflow-y: auto;
+}
+
+.patients-container__wrapper-list__option {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 48px;
+  width: 100%;
+  margin-bottom: 32px;
+  padding-right: 20px;
+}
+
+.patients-container__wrapper-list__data {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.patients-container__wrapper-list__data img {
+  display: flex;
+  height: 48px;
+  width: 48px;
+  margin-right: 12px;
+}
+
+.patients-container__wrapper-list__text {
+  display: flex;
+  flex-direction: column;
+}
+
+.patients-container__wrapper-list__text h6 {
+  font: normal normal bold 14px/19px Manrope;
+  letter-spacing: 0px;
+  color: var(--black);
+}
+
+.patients-container__wrapper-list__text p {
+  font: normal normal normal 14px/19px Manrope;
+  letter-spacing: 0px;
+  color: var(--dark-gray);
+}
+
+.patients-container__wrapper-list__img {
+  display: flex;
+  width: 18px;
+}

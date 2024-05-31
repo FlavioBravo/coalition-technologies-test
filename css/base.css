@@ -1,0 +1,65 @@
+.main-grid {
+  display: grid;
+    grid-template:
+    "header header header header header"
+    "patients history history history information"
+    "patients history history history information"
+    "patients history history history information";
+  background: var(--gray);
+  height: auto;
+  width: 100%;
+  padding: 18px;
+  grid-gap: 32px;
+}
+
+.navbar-grid {
+  grid-area: header;
+}
+
+.patients-grid {
+  grid-area: patients;
+}
+
+.history-grid {
+  grid-area: history;
+}
+
+.information-grid {
+  grid-area: information;
+  margin-top: -14px;
+}
+
+.container {
+  display: flex;
+  width: 100%;
+  box-sizing: border-box;
+  background: var(--white) 0% 0% no-repeat padding-box;
+  border-radius: 16px;
+  padding: 20px;
+}
+
+.subtitle {
+  font: normal normal 800 24px/33px Manrope;
+  letter-spacing: 0px;
+  color: var(--black);
+}
+
+.mb-16 {
+  margin-bottom: 16px;
+}
+
+.mb-32 {
+  margin-bottom: 32px;
+}
+
+.mr-12 {
+  margin-right: 12px;
+}
+
+.hover {
+  background-color: var(--gray);
+}
+
+.navbar--active {
+  background: var(--turquoise) !important;
+}

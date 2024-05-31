@@ -1,0 +1,52 @@
+.diagnostic-container {
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.diagnostic-container__title {
+    margin-bottom: 40px;
+}
+
+.diagnostic-container__header-table {
+    display: flex;
+    height: 48px;
+    background-color: var(--gray);
+    border-radius: 24px;
+    font: normal normal bold 14px/19px Manrope;
+    letter-spacing: 0px;
+    color: var(--black);
+    padding: 0 16px;
+}
+
+.w-25 {
+    display: flex;
+    align-items: center;
+    width: 25%;
+}
+
+.w-50 {
+    display: flex;
+    align-items: center;
+    width: 50%;
+}
+
+.diagnostic-container__body-table {
+    display: flex;
+    flex-direction: column;
+    height: 180px;
+    width: 100%;
+    overflow-y: auto;
+}
+
+.diagnostic-container__row-table {
+    display: flex;
+    min-height: 40px;
+    margin-bottom: 8px;
+    width: 100%;
+    font: normal normal normal 14px/19px Manrope;
+    letter-spacing: 0px;
+    color: var(--black);
+    padding: 0 16px;
+}
